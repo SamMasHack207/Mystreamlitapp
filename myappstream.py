@@ -227,7 +227,7 @@ if st.button("🚀 Analyser le match", key="analyze_btn", type="primary"):
                         data = {"team1": team1, "team2": team2}
                         
                         # Augmenter le timeout pour l'analyse
-                        res = r.post(url, json=data, timeout=60)
+                        res = r.post(url, json=data)
                         
                         if res.status_code == 200:
                             analysis_data = res.json()
